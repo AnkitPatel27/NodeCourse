@@ -1,0 +1,2 @@
+# recursively remove all folders with the name "node_modules"
+**/node_modules/
