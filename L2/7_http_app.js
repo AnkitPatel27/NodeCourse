@@ -52,6 +52,8 @@ const server = http.createServer((req, res) => {
   const url = req.url
   console.log(url)
   // home page
+  // localhost:5000/
+  // 127.0.0.1:5000/  www.google.com => DNS => 20.21.23.12:443
   if (url === '/') {
     res.writeHead(200, { 'content-type': 'text/html' })
     res.write(homePage)
@@ -63,7 +65,7 @@ const server = http.createServer((req, res) => {
     res.write('<h1>about page</h1>')
     res.end()
   }
-  // styles
+  // // styles
   else if (url === '/styles.css') {
     res.writeHead(200, { 'content-type': 'text/css' })
     res.write(homeStyles)
