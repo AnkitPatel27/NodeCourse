@@ -1,9 +1,9 @@
 const { Sequelize } = require('sequelize');
 
 // Option 1: Passing parameters separately
-const sequelize = new Sequelize('mariaDB_project', 'root', 'MySQL^*892023', {
-  host: 'localhost',
-  dialect: 'mariadb',
+const sequelize = new Sequelize(process.env.DATABASE,process.env.DB_USER , process.env.DB_PASSWORD, {
+  host: process.env.DB_HOST,
+  dialect: process.env.DB_DIALECT,
   port: 3306, // Default MariaDB port
 });
 
